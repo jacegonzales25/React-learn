@@ -1,5 +1,6 @@
-import React from "react";
+import { useRouter } from "next/router";
 
-export default function Page({ params }: { params: { postId: string } }) {
-    return <h1>My Page</h1>
-  }
+export default function Page(){
+    const router = useRouter();
+    return <p>Post: {router.query.postId}</p>
+}
